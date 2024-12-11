@@ -61,12 +61,14 @@ async def generate_quiz(number_of_questions = "5", difficulty = "easy", user_pro
         print(f"An error occurred: {e}")
         resp = "Error occured while generating the quiz on user prompt only." + str(e)
 
+
     return resp
 
 # Main
-def main(number_of_questions, difficulty, user_prompt):
+def main(difficulty, number_of_questions, user_prompt):
 
     response = asyncio.run(generate_quiz(number_of_questions, difficulty, user_prompt))
+    print(response)
     return response
 
 
@@ -77,4 +79,4 @@ if __name__ == "__main__":
     number_of_questions = 10 
     difficulty = "hard"
     
-    print(main(number_of_questions, difficulty, user_prompt))
+    print(main(difficulty, number_of_questions, user_prompt))

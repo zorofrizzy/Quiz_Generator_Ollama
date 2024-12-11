@@ -151,6 +151,7 @@ def main(difficulty = 'easy', number_of_questions = '5', user_prompt = ""):
     nodes = create_nodes(documents)
     index = create_index(nodes)
     response = query_on_index(index,difficulty, number_of_questions, user_prompt)
+    print(response)
     return response
 
 
